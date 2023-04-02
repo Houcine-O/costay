@@ -66,6 +66,16 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 
+
+
 #menu::-webkit-inner-spin-button {
   opacity: 0 ;
+}
+
+#nbrnuit::-webkit-inner-spin-button {
+  opacity: 0 ;
+}
+
+#nbrnuit{
+  margin:auto;
 }
