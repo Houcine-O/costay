@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by rachid</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Fugaz One' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body style='background-color:#E6C79C;'>
+  <div class='container'>
+    <div class='row justify-content-center'>
+      <div class='col col-md-4'><img src="https://www.ibiris-hotel.com/wp-content/uploads/2022/06/logo-ibiris-171px.png"></div>
+      <div class='col'>
+        <p class='costay'>COSTAY</p>
+        
+      </div>
+    </div>
+    <div class='row justify-content-center'>
+      <div class='col col-md-6 p-3 mb-2 inputForm'>
+        <div class='montantTotalDiv'>
+          <p class='montantTotal' id='montantId'>00000</p>
+          
+        </div>
+        <button type="button" class='btn btn-dark' id='act' style='width:50%;margin:auto;
+  display:block;font-size:24px;font-family: 'DM Sans';' onclick='calc()'>Calculer</button>
+        <div class='container'>
+          <p class='heb'>HÉBERGEMENT</p>
+          <div class='row'>
+            <div class='col col-md-5 chambre'>
+              <h4 style='margin-bottom:1em;text-align:center;'>Chambre</h4>
+
+              <div class='row'>
+                <div class='col'><label class="labl" for="king">King</label></div>
+                <div class='col'><input type="number" min="0" value='0' id="king" class='chnumber' /></div>
+              </div>
+
+              <div class='row'>
+                <div class='col'><label class="labl" for="queen">Queen</label></div>
+                <div class='col'><input type="number" min="0" value='0' id="queen" class='chnumber' /></div>
+              </div>
+              <div class='row'>
+                <div class='col'><label class="labl" for="twin">Twin</label></div>
+                <div class='col'><input type="number" min="0" value='0' id="twin" class='chnumber' /></div>
+              </div>
+              <div class='row'>
+                <div class='col'><label class="labl" for="triple">Triple</label></div>
+                <div class='col'><input type="number" min="0" value='0' id="triple" class='chnumber' /></div>
+              </div>
+              <div class='row'>
+                <div class='col'><label class="labl" for="suite">Suite</label></div>
+                <div class='col'><input type="number" min="0" value='0' id="suite" class='chnumber' /></div>
+              </div>
+
+            </div>
+
+            <div class='col pax' style='margin-left:15px;'>
+              <h4 style='margin-bottom:1em;text-align:center;'>PAX</h4>
+
+              <div class='row lablx'>
+                <div class='col '>
+                  <label for="adultes">Adultes</label>
+                </div>
+                <div class='col'><select onclick='calc()' class="custom-select" id="adultes">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select></div>
+              </div>
+
+              <div class='row lablx'>
+                <div class='col'><label for="enfg">Enfants 6-12</label></div>
+                <div class='col'><select class="custom-select" id="enfg">
+                    <option selected>0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select></div>
+              </div>
+              <div class='row lablx'>
+                <div class='col'><label for="enfp">Enfants 0-6</label></div>
+                <div class='col'><select class="custom-select" id="enfp">
+                    <option selected>0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class='container'>
+          <p class='heb'>SÉJOUR</p>
+          <div class='row chambre lablx'>
+            <div class='col'><label for="nbrnuit">Nombre de nuitées</label></div>
+            <div class='col'><select class="custom-select" id="nbrnuit" style='margin-bottom:10px;'>
+                
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select></div>
+          </div>
+        </div>
+
+        <div class='container'>
+          <p class='heb'>PENSION</p>
+          <div class='col chambre labl'>
+            <div class='row justify-content-center'>
+              <div class="form-check-inline">
+                <label class="form-check-label" for="radio1">
+                  <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>LPD
+                </label>
+              </div>
+              <div class="form-check-inline">
+                <label class="form-check-label" for="radio2">
+                  <input type="radio"   class="form-check-input" id="radio2" name="optradio" value="option2">DP
+                </label>
+              </div>
+              <div class="form-check-inline">
+                <label class="form-check-label">
+                  <input type="radio"  id="radio3" class="form-check-input" name="optradio" value="option3">PC
+                </label>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class='col' style='margin-left:20%;margin-top:6px;'>Menu à </div>
+              <div class='col' style='margin-right:20%;margin-bottom:10px;'><input type="number" min="0" value='0' id="menu" class='chnumber' /></div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+        
+    </div>
+
+
+  </div>
+
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

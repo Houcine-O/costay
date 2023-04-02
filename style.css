@@ -1,0 +1,71 @@
+.costay {
+  font-family: Fugaz One;
+  font-size: 100px;
+  text-shadow: 4px 4px 4px #ee0000;
+}
+
+
+.inputForm {
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: #fffcfc;
+  box-shadow: 3px 3px 5px black;
+}
+
+.montantTotal {
+  margin: auto;
+  text-align: center;
+  font-family: DM Sans;
+  font-size: 60px;
+}
+
+.montantTotalDiv {
+  background-color: #fbec5d;
+  margin: auto;
+  width: 50%;
+  border: 3px solid black;
+}
+
+.heb {
+  margin-top: 2em;
+  text-align: center;
+  font-family: DM Sans;
+  font-size: 24px;
+  color: #252525;
+  text-shadow: 0px 3px 5px #252525;
+}
+
+.chnumber {
+  margin-top:0.2em;
+  width: 100%;
+  border-radius: 10px;
+  border: 0.51px solid black;
+}
+
+.labl,
+.lablx {
+  font-family: DM Sans;
+  font-size: 20px;
+}
+
+.lablx {
+  margin-top: 1.2em;
+}
+
+.chambre,
+.pax {
+  padding-top: 10px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px black;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+
+#menu::-webkit-inner-spin-button {
+  opacity: 0 ;
+}
